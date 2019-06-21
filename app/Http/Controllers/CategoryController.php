@@ -12,12 +12,20 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct()
+     {
+     	$this->middleware('auth');
+     }
+     
     public function index()
     {
       $products=product::all();
 	    return view('product',['product'=>$products]);
 
     }
+
+
 
     /**
      * Show the form for creating a new resource.
