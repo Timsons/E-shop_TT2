@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+Auth::routes();
+
+Route::redirect('/', 'product/');
+
+Route::get('product/', 'CategoryController@index');
+
+
+Route::get('/home', 'HomeController@index')->name('home');

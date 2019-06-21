@@ -18,8 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('firstName');
             $table->string('lastName');
             $table->unsignedInteger('roleID');
-            $table->string('phoneNumber');
-            $table->string('shippingAddress');
+            $table->string('phoneNumber')->nullable();
+            $table->string('shippingAddress')->nullable();
             $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();

@@ -17,9 +17,9 @@ class CreateProductTable extends Migration
             $table->bigIncrements('productID');
               $table->string('code');
               $table->string('name');
-              $table->string('description');
+              $table->string('description')->nullable();
 		          $table->float('price');
-              $table->string('image_dir');
+              $table->string('image_dir')->nullable();
 		          $table->unsignedInteger('categoryID');
             $table->timestamps();
         });
