@@ -1,41 +1,31 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use App\Product;
+use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-     /*public function __construct()
-     {
-     	$this->middleware('auth');
-     }
-     */
     public function index()
     {
-      $products=product::all();
-	    return view('product',['product'=>$products]);
-
+        //
     }
-
-
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+    */
+    public function new () {
+ 	    //$products=Product::where('categoryID','=',$categoryID)->get();
+ 	    return view('product_new');
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -43,10 +33,17 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+     public function store($id,$name,$price,$code)
+     {
+        	$product = new Product();
+ 	        $product->name=$name;
+          $product->categoryID=$id;
+          $product->price=$price;
+          $product->code=$code;
+ 	        $product->save();
+ 	        return redirect('/');
+     }
+
 
     /**
      * Display the specified resource.
@@ -88,8 +85,10 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($productID)
     {
-        //
+      Product::where('productID','=',$productID)->delete();
+      return redirect('./product/');
+
     }
 }
