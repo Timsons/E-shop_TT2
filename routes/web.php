@@ -21,8 +21,5 @@ Route::redirect('/', 'product/');
 
 Route::get('product/', 'CategoryController@index');
 
-Route::get('product/delete/{id}','ProductController@destroy');
-Route::get('product/new/', 'ProductController@new');
-Route::get('product/insert/{id}/{name}/{price}/{code}/', 'ProductController@store');
 
 Route::get('/home', 'HomeController@index')->name('home');
