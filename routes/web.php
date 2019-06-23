@@ -17,7 +17,11 @@
 
 Auth::routes();
 
-Route::redirect('/', 'product/');
+Route::redirect('/', 'first/');
+
+Route::get('first/', 'FirstController@index');
+Route::get('main/', 'FirstController@categories');
+
 
 Route::get('product/', 'CategoryController@index');
 
