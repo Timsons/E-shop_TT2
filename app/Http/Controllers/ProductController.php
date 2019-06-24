@@ -39,6 +39,7 @@ class ProductController extends Controller
           $product->categoryID=$id;
           $product->price=$price;
           $product->code=$code;
+		  $product->image=$image;
  	        $product->save();
  	        return redirect('/');
      }

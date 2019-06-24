@@ -16,7 +16,14 @@ Auth::routes();
 Route::redirect('/', 'first/');
 Route::get('first/', 'FirstController@index');
 Route::get('main/', 'FirstController@categories');
+<<<<<<< HEAD
 //Route::get('login/', 'FirstController@loginIn');
+=======
+
+//Route::get('login/', 'FirstController@loginIn');
+
+
+>>>>>>> 943b60ea820442d4ff5b616d2ad326acafe57907
 Route::get('product/', 'CategoryController@index');
 Route::get('product/delete/{id}','ProductController@destroy');
 Route::get('product/new/', 'ProductController@new');
