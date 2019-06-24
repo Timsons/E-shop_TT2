@@ -32,8 +32,7 @@
 
 
 </html>
-<<<<<<< HEAD
-=======
+
 
 <script>
 	function loginScreen(){
@@ -41,4 +40,3 @@
 	}
 
 </script>
->>>>>>> 943b60ea820442d4ff5b616d2ad326acafe57907

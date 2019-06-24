@@ -31,10 +31,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     protected $table = 'user1';
-<<<<<<< HEAD
-=======
 
->>>>>>> 943b60ea820442d4ff5b616d2ad326acafe57907
     public function product() {
         return $this->hasMany('App\product');
     }
