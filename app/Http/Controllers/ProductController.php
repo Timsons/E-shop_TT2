@@ -15,7 +15,6 @@ class ProductController extends Controller
     {
         //
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -62,9 +61,11 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($productID)
     {
-        //
+        $product = Product::all();
+        $neededProduct = Product::where('productID', $productID);
+        return view('product_edit',['product'=>$product],['neededProduct'=>$neededProduct]);
     }
 
     /**
@@ -74,9 +75,13 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(/*Request $request,*/ $productID,$categoryID,$name,$price,$code)
     {
-        //
+        Product::where('productID', $productID)->update(['categoryID' => $categoryID]);
+        Product::where('productID', $productID)->update(['name' => $name]);
+        Product::where('productID', $productID)->update(['price' => $price]);
+        Product::where('productID', $productID)->update(['code' => $code]);
+        return redirect('/');
     }
 
     /**
