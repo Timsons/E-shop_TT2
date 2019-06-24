@@ -11,6 +11,7 @@
 			  <a href="#news">News</a>
 			  <a href="#contact">Contact</a>
 			  <a href="#about">About</a>
+				<a href="./product">For Admins</a>
 			  <input class="loginbutton" type="button" value="Login/Register" onclick="loginScreen()">
 		</div>
 	@show

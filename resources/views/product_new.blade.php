@@ -1,4 +1,6 @@
-//We will add a product.
+
+
+<h1>Add a product.<h1>
 <table>
   <tr>
   	<td>Product category<td>

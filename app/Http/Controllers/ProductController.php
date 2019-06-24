@@ -15,6 +15,12 @@ class ProductController extends Controller
     {
         //
     }
+
+    /*public function __construct()
+    {
+	     $this->middleware('auth');
+    }*/
+
     /**
      * Show the form for creating a new resource.
      *
@@ -39,7 +45,7 @@ class ProductController extends Controller
           $product->categoryID=$id;
           $product->price=$price;
           $product->code=$code;
-		  $product->image=$image;
+		  //$product->image=$image;
  	        $product->save();
  	        return redirect('/');
      }
