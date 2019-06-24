@@ -20,7 +20,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-      $products=product::all();
+		$products=product::all();
 	    return view('product',['product'=>$products]);
 
     }

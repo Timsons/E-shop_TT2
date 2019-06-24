@@ -36,7 +36,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    protected $table = 'users';
+    protected $table = 'user1';
 
     public function product() {
         return $this->hasMany('App\product');

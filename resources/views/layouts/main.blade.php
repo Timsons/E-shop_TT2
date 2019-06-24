@@ -5,6 +5,7 @@
 		<link href="{{ asset('css/topbar.css') }}" rel="stylesheet">
 	</head>
 	<body>
+	@section('topbar')
 		<div class="topnav">
 			  <a href="#home">Home</a>
 			  <a href="#news">News</a>
@@ -12,6 +13,8 @@
 			  <a href="#about">About</a>
 			  <input class="loginbutton" type="button" value="Login/Register" onclick="loginScreen()">
 		</div>
+	@show
+	@section('sidebar')
 		<div class="sidenav">
 			@if(count($categories)==0)
 				<p>Nothing here</p>
@@ -21,8 +24,10 @@
 				@endforeach
 			@endif
 		</div>
-
-<!-- Page content -->
+	@show
+		<div>
+			@yield('content')
+		</div>
 	</body>
 
 

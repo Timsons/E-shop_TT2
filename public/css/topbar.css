@@ -6,7 +6,7 @@
   top: 0;
   left:160px;
   position: relative;
-  /*float: right;*/
+  float: left;
 }
 
 /* Style the links inside the navigation bar */
