@@ -5,6 +5,7 @@
   height: 56px;
   top: 0;
   left:160px;
+  position: relative;
   /*float: right;*/
 }
 
@@ -28,4 +29,8 @@
 .topnav a.active {
   background-color: #4CAF50;
   color: white;
+}
+
+.loginbutton {
+	font-size: 43px;
 }

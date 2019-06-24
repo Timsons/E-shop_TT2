@@ -6,10 +6,11 @@
 	</head>
 	<body>
 		<div class="topnav">
-			<a class="active" href="#home">Home</a>
+			  <a href="#home">Home</a>
 			  <a href="#news">News</a>
 			  <a href="#contact">Contact</a>
 			  <a href="#about">About</a>
+			  <input class="loginbutton" type="button" value="Login/Register" onclick="loginScreen()">
 		</div>
 		<div class="sidenav">
 			@if(count($categories)==0)
@@ -26,3 +27,10 @@
 
 
 </html>
+
+<script>
+	function loginScreen(){
+		window.location.href="./login/";
+	}
+
+</script>

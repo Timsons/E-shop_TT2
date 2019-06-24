@@ -22,6 +22,8 @@ Route::redirect('/', 'first/');
 Route::get('first/', 'FirstController@index');
 Route::get('main/', 'FirstController@categories');
 
+//Route::get('login/', 'FirstController@loginIn');
+
 
 Route::get('product/', 'CategoryController@index');
 

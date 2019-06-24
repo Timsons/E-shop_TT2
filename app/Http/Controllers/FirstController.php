@@ -16,9 +16,13 @@ class FirstController extends Controller
 
     }
 	
-	public function store($id,$name,$price,$code)
+	public function store()
      {
         	$category = new Category();
  	        $category->name=$name;
      }
+	 
+	 public function loginIn(){
+		 return view('auth/login');
+	 }
 }
